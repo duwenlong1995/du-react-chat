@@ -1,0 +1,106 @@
+.contacts {
+  display: grid;
+  grid-template-rows: 10% 75% 15%;
+  overflow: hidden;
+  background-color: #080420;
+}
+
+.contacts .brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.contacts .brand img {
+  height: 2rem;
+}
+
+.contacts .brand h3 {
+  color: white;
+  text-transform: uppercase;
+}
+
+.contacts .contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+  gap: 0.8rem;
+}
+
+.contacts .contacts::-webkit-scrollbar {
+  width: 0.2rem;
+}
+
+.contacts .contacts::-webkit-scrollbar-thumb {
+  background-color: #ffffff39;
+  width: 0.1rem;
+  border-radius: 1rem;
+}
+
+.contacts .contacts .contact {
+  background-color: #ffffff34;
+  min-height: 5rem;
+  cursor: pointer;
+  width: 90%;
+  border-radius: 0.2rem;
+  padding: 0.4rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  transition: 0.5s ease-in-out;
+}
+
+.contacts .contacts .contact .avatar img {
+  height: 3rem;
+}
+
+.contacts .contacts .contact .username h3 {
+  color: white;
+}
+
+.contacts .contacts .selected {
+  background-color: #9a86f3;
+}
+
+.contacts .contacts .item:hover {
+  transition-duration: 0.3s;
+  transform: scale(1.05);
+}
+
+.contacts .contacts .active {
+  cursor: pointer !important;
+}
+
+.contacts .contacts .enter {
+  cursor: pointer !important;
+  opacity: 0.3;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.1) inset;
+}
+
+.contacts .currentUser {
+  background-color: #0d0d30;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contacts .currentUser .avatar img {
+  height: 4rem;
+  max-inline-size: 100%;
+}
+
+.contacts .currentUser .username h2 {
+  color: white;
+}
+
+@media screen and (min-width: 720px) and (max-width: 1080px) {
+  .contacts .currentUser {
+    gap: 0.5rem;
+  }
+  .contacts .currentUser .username h2 {
+    font-size: 1rem;
+  }
+}
